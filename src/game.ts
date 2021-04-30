@@ -1,7 +1,7 @@
 import "phaser";
 import {SceneGame} from "./modules/SceneGame";
 
-const config: GameConfig = {
+const config: Phaser.Types.Core.GameConfig = {
     type   : Phaser.AUTO, // WebGL if available
     title: "Blueprint",
     width: 800,

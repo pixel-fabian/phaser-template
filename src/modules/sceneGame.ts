@@ -11,7 +11,9 @@ export class SceneGame extends Phaser.Scene {
     // LIFECYCLE (init, preload, create, update)    //
     //////////////////////////////////////////////////
 
-    init(params): void {
+    init(): void {
+        console.log("init()");
+        
     }
 
     preload(): void {
@@ -20,7 +22,7 @@ export class SceneGame extends Phaser.Scene {
     create(): void {
     }
 
-    update(time): void {
+    update(): void {
     }
 
     //////////////////////////////////////////////////
