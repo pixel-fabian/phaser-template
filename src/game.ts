@@ -1,4 +1,5 @@
 import "phaser";
+import {SceneGame} from "./modules/SceneGame";
 
 const config: GameConfig = {
     type   : Phaser.AUTO, // WebGL if available
@@ -6,6 +7,7 @@ const config: GameConfig = {
     width: 800,
     height: 600,
     parent: "game",
+    scene: [SceneGame],
 };
 
 window.onload = () => {
