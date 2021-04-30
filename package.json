@@ -1,0 +1,32 @@
+{
+  "name": "phaser-blueprint",
+  "version": "0.0.1",
+  "description": "Blueprint to build a game with phaser",
+  "main": "index.html",
+  "scripts": {
+    "build": "webpack", 
+    "dev": "webpack --watch" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixel-fabian/phaser-blueprint.git"
+  },
+  "keywords": [
+    "phaser",
+    "javascript",
+    "html5-game"
+  ],
+  "author": "Pixel.Fabian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pixel-fabian/phaser-blueprint/issues"
+  },
+  "homepage": "https://github.com/pixel-fabian/phaser-blueprint#readme",
+  "devDependencies": {
+    "phaser": "^3.54.0",
+    "ts-loader": "^9.1.1",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.6.0"
+  }
+}
