@@ -1,6 +1,6 @@
 {
   "name": "phaser-blueprint",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Blueprint to build a game with phaser",
   "main": "index.html",
   "scripts": {
