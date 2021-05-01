@@ -1,11 +1,12 @@
 {
   "name": "phaser-blueprint",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "Blueprint to build a game with phaser",
   "main": "index.html",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack --watch",
+    "clean": "rm -rf ./dist/js",
+    "build": "npm run clean && webpack",
+    "dev": "npm run clean && webpack --watch",
     "lint": "eslint ./src --ext .ts && prettier --check --ignore-path .gitignore ./src/",
     "lint:fix": "eslint ./src/**/*.ts --fix && prettier --ignore-path .gitignore --write ./src/"
   },

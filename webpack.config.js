@@ -1,6 +1,6 @@
 const path = require('path');
 module.exports = {
-  entry: './src/game.ts',
+  entry: './src/js/game.ts',
   module: {
     rules: [
       {
@@ -11,11 +11,11 @@ module.exports = {
     ]
   },
   resolve: {
-    extensions: [ '.ts', '.tsx', '.js' ]
+    extensions: ['.ts', '.tsx', '.js']
   },
   output: {
     filename: 'game.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist/js')
   },
   mode: 'development'
 };

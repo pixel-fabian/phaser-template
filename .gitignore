@@ -15,7 +15,7 @@ node_modules/
 package-lock.json
 
 # generated output
-dist
+dist/js
 docs
 
 # system Files
