@@ -16,7 +16,9 @@ export class SceneGame extends Phaser.Scene {
 
   preload(): void { }
 
-  create(): void { }
+  create(): void {
+    this.add.text(350, 300, 'Hello World', { fontFamily: 'sans-serif', color: '#fff' });
+  }
 
   update(): void { }
 
