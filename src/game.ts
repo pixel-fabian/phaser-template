@@ -1,15 +1,16 @@
-import "phaser";
-import {SceneGame} from "./modules/SceneGame";
+import 'phaser';
+import { SceneGame } from './modules/SceneGame';
 
 const config: Phaser.Types.Core.GameConfig = {
-    type   : Phaser.AUTO, // WebGL if available
-    title: "Blueprint",
-    width: 800,
-    height: 600,
-    parent: "game",
-    scene: [SceneGame],
+  type: Phaser.AUTO, // WebGL if available
+  title: 'Blueprint',
+  width: 800,
+  height: 600,
+  parent: 'game',
+  scene: [SceneGame],
 };
 
 window.onload = () => {
-    let game = new Phaser.Game(config);
+  // eslint-disable-next-line no-unused-vars
+  const game = new Phaser.Game(config);
 };

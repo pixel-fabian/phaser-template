@@ -4,8 +4,10 @@
   "description": "Blueprint to build a game with phaser",
   "main": "index.html",
   "scripts": {
-    "build": "webpack", 
-    "dev": "webpack --watch" 
+    "build": "webpack",
+    "dev": "webpack --watch",
+    "lint": "eslint ./src --ext .ts && prettier --check --ignore-path .gitignore ./src/",
+    "lint:fix": "eslint ./src/**/*.ts --fix && prettier --ignore-path .gitignore --write ./src/"
   },
   "repository": {
     "type": "git",
@@ -23,7 +25,13 @@
   },
   "homepage": "https://github.com/pixel-fabian/phaser-blueprint#readme",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-recommended": "^4.1.0",
     "phaser": "^3.54.0",
+    "prettier": "^2.2.1",
     "ts-loader": "^9.1.1",
     "typescript": "^4.2.4",
     "webpack": "^5.36.2",
