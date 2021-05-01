@@ -13,10 +13,11 @@ Blueprint to create a game with [phaser](https://phaser.io/)
  - basic phaser scene
  - [TypeScript](https://www.typescriptlang.org/) support
  - [webpack](https://webpack.js.org/) to bundle JS
+ - [eslint](https://eslint.org/) and [prettier](https://prettier.io/) to format code
 
 ## Installation
 
-Prerequisite: Have node.js and npm installed.
+Prerequisite: Have [node.js](https://nodejs.org) and npm installed.
 
 1. Clone or download this repository
 2. Install dependencies ```npm install```
@@ -26,3 +27,11 @@ Prerequisite: Have node.js and npm installed.
 1. Start watcher ```npm run dev```
 2. Make changes
 3. Compiled JavaScript will be in ```dist``` folder
+
+### Deploy for production
+
+```npm run build``` [unter construction 🚧]
+
+## Licence
+
+[MIT](/LICENSE)
