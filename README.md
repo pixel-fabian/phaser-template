@@ -15,7 +15,7 @@ Blueprint to create a game with [phaser](https://phaser.io/)
  - [webpack](https://webpack.js.org/) to bundle JS
  - [eslint](https://eslint.org/) and [prettier](https://prettier.io/) to format code
 
- > Note: There is not webserver included. I usually use a the Live Server extension form VSCode as a development server.
+ > Note: There is no webserver included. I usually use a the Live Server extension form VSCode as a development server.
 
 ## Installation
 
@@ -26,7 +26,7 @@ Prerequisite: Have [node.js](https://nodejs.org) and npm installed.
 
 ## Usage
 
-1. Start watcher ```npm run dev```
+1. Start watcher ```npm start```
 2. Make changes
 3. Compiled JavaScript will be in ```dist/js``` folder
 
