@@ -11,7 +11,6 @@ export class SceneGame extends Phaser.Scene {
   //////////////////////////////////////////////////
 
   init(): void {
-    console.log('init()');
   }
 
   preload(): void { }

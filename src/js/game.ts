@@ -1,5 +1,5 @@
 import 'phaser';
-import { SceneGame } from './scenes/SceneGame';
+import { SceneGame } from './scenes/sceneGame';
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO, // WebGL if available
