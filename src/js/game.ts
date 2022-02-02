@@ -1,5 +1,7 @@
 import 'phaser';
-import { SceneGame } from './scenes/sceneGame';
+import SceneLoad from './scenes/sceneLoad';
+import SceneMenu from './scenes/sceneMenu';
+import SceneGame from './scenes/sceneGame';
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO, // WebGL if available
@@ -7,10 +9,9 @@ const config: Phaser.Types.Core.GameConfig = {
   width: 800,
   height: 600,
   parent: 'game',
-  scene: [SceneGame],
+  scene: [SceneLoad, SceneMenu, SceneGame],
 };
 
 window.onload = () => {
-  // eslint-disable-next-line no-unused-vars
-  const game = new Phaser.Game(config);
+  new Phaser.Game(config);
 };
