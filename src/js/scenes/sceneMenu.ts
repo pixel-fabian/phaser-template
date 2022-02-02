@@ -1,5 +1,6 @@
 import 'phaser';
 import SCENES from '../constants/SceneKeys';
+import TEXTURES from '../constants/TextureKeys';
 
 export default class SceneMenu extends Phaser.Scene {
   constructor() {
@@ -17,17 +18,7 @@ export default class SceneMenu extends Phaser.Scene {
   preload(): void {}
 
   create(): void {
-    const buttonPlay = this.add.text(350, 200, '< Play >', {
-      fontFamily: 'BitPotion',
-      color: '#fff',
-      fontSize: '35px',
-    });
-    buttonPlay.setInteractive();
-    buttonPlay.on('pointerdown', () => {
-      console.log('Play');
-      this.scene.start(SCENES.GAME);
-    });
-
+    const buttonPlay = this._createButton(TEXTURES.BUTTON, SCENES.GAME);
   }
 
   update(): void {}
@@ -35,4 +26,36 @@ export default class SceneMenu extends Phaser.Scene {
   //////////////////////////////////////////////////
   // Private methods                              //
   //////////////////////////////////////////////////
+
+  _createButton(sTextureKey: TEXTURES, sStartScene: SCENES) {
+    const button = this.add.sprite(100, 100, sTextureKey, 0);
+    button.setScale(3);
+    const pressAnimKey = `press${sTextureKey}`;
+    this.anims.create({
+      key: pressAnimKey,
+      frames: this.anims.generateFrameNumbers(sTextureKey, {
+        start: 0,
+        end: 2,
+      }),
+      frameRate: 12,
+      repeat: 0,
+    });
+    button.setInteractive();
+    button.on('pointerdown', () => {
+      button.play(pressAnimKey);
+    });
+    button.on(
+      'animationcomplete',
+      (animation) => {
+        switch (animation.key) {
+          case pressAnimKey:
+            this.scene.start(sStartScene)
+            break;
+        }
+      },
+      this,
+    );
+
+    return button;
+  }
 }
