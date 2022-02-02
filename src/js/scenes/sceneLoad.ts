@@ -1,5 +1,6 @@
 import 'phaser';
 import SCENES from '../constants/SceneKeys';
+import TEXTURES from '../constants/TextureKeys';
 export default class SceneLoad extends Phaser.Scene {
   constructor() {
     super({
@@ -13,13 +14,25 @@ export default class SceneLoad extends Phaser.Scene {
 
   init(): void {}
 
-  preload(): void {}
+  preload(): void {
+    // load all textures
+    this.load.spritesheet(TEXTURES.BUTTON, "assets/button_01.png", {
+      frameWidth: 64,
+      frameHeight: 32,
+    });
+
+    // create loading bar
+    const loadingBar = this.add.graphics({
+      fillStyle: {
+        color: 0xffffff
+      }
+    });
+    this.load.on("progress", (nPercentage) => {
+      loadingBar.fillRect(30, 300, 740*nPercentage, 40);
+    });
+  }
 
   create(): void {
-    this.add.text(350, 300, 'Loading', {
-      fontFamily: 'sans-serif',
-      color: '#fff',
-    });
     this.scene.start(SCENES.MENU);
   }
 
