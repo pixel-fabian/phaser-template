@@ -28,16 +28,6 @@ export default class SceneMenu extends Phaser.Scene {
       this.scene.start(SCENES.GAME);
     });
 
-    const buttonHighscore = this.add.text(325, 250, '< Highscore >', {
-      fontFamily: 'BitPotion',
-      color: '#fff',
-      fontSize: '35px',
-    });
-    buttonHighscore.setInteractive();
-    buttonHighscore.on('pointerdown', () => {
-      console.log('Highscore');
-      this.scene.start(SCENES.HIGHSCORE);
-    });
   }
 
   update(): void {}

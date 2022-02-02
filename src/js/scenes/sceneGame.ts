@@ -3,7 +3,7 @@ import SCENES from '../constants/SceneKeys';
 export default class SceneGame extends Phaser.Scene {
   constructor() {
     super({
-      key: SCENES.LOAD,
+      key: SCENES.GAME,
     });
   }
 
