@@ -1,7 +1,7 @@
 {
   "name": "phaser-template",
-  "version": "0.4.0",
-  "description": "Template to build a game with phaser",
+  "version": "0.5.0",
+  "description": "Template to build a game with phaser 3",
   "main": "index.html",
   "scripts": {
     "build": "webpack",
