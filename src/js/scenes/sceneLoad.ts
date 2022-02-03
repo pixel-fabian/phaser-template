@@ -16,7 +16,7 @@ export default class SceneLoad extends Phaser.Scene {
 
   preload(): void {
     // load all textures
-    this.load.spritesheet(TEXTURES.BUTTON, "assets/button_01.png", {
+    this.load.spritesheet(TEXTURES.BUTTON_PLAY, "assets/button_01_play.png", {
       frameWidth: 64,
       frameHeight: 32,
     });

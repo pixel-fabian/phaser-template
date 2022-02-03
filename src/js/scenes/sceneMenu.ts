@@ -18,7 +18,7 @@ export default class SceneMenu extends Phaser.Scene {
   preload(): void {}
 
   create(): void {
-    const buttonPlay = this._createButton(TEXTURES.BUTTON, SCENES.GAME);
+    this._createButton(400, 200, TEXTURES.BUTTON_PLAY, SCENES.GAME);
   }
 
   update(): void {}
@@ -27,8 +27,8 @@ export default class SceneMenu extends Phaser.Scene {
   // Private methods                              //
   //////////////////////////////////////////////////
 
-  _createButton(sTextureKey: TEXTURES, sStartScene: SCENES) {
-    const button = this.add.sprite(100, 100, sTextureKey, 0);
+  _createButton(nX: number, nY: number, sTextureKey: TEXTURES, sStartScene: SCENES) {
+    const button = this.add.sprite(nX, nY, sTextureKey, 0);
     button.setScale(3);
     const pressAnimKey = `press${sTextureKey}`;
     this.anims.create({
@@ -40,7 +40,13 @@ export default class SceneMenu extends Phaser.Scene {
       frameRate: 12,
       repeat: 0,
     });
-    button.setInteractive();
+    button.setInteractive({ useHandCursor: true });
+    button.on('pointerover', () => {
+      button.setFrame(3);
+    });
+    button.on('pointerout', () => {
+      button.setFrame(0);
+    });
     button.on('pointerdown', () => {
       button.play(pressAnimKey);
     });
