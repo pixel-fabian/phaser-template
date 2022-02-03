@@ -1,4 +1,4 @@
-# Phaser Blueprint 🎮
+# Phaser 3 Template 🎮
 
 ![GitHub](https://img.shields.io/github/license/pixel-fabian/phaser-blueprint?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/pixel-fabian/phaser-blueprint?style=flat-square)
@@ -6,7 +6,7 @@
 
 ---
 
-Blueprint to create a game with [phaser](https://phaser.io/)
+Template to create a game with [phaser 3](https://phaser.io/) and typescript.
 
 ## Features
 

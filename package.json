@@ -1,7 +1,7 @@
 {
   "name": "phaser-template",
   "version": "0.4.0",
-  "description": "Blueprint to build a game with phaser",
+  "description": "Template to build a game with phaser",
   "main": "index.html",
   "scripts": {
     "build": "webpack",
@@ -18,7 +18,7 @@
     "javascript",
     "html5-game"
   ],
-  "author": "Pixel.Fabian",
+  "author": "pixel-fabian",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pixel-fabian/phaser-blueprint/issues"
