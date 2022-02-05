@@ -10,7 +10,7 @@ Template to create a game with [phaser 3](https://phaser.io/) and typescript.
 
 ## Features
 
-- basic phaser scene
+- Basic phaser scenes
 - [TypeScript](https://www.typescriptlang.org/) support
 - [webpack](https://webpack.js.org/) to bundle JS
 - [eslint](https://eslint.org/) and [prettier](https://prettier.io/) to format code
@@ -44,10 +44,19 @@ dist/             // everything to run the game
 ```
 src/js/           // Typescript code, needs compiling
   scenes/         // Phaser scenes
+  constants/      // Constants e.g. to manage scene or texture keys
 ```
 
 ```
 root              // config files
+```
+
+### Phaser scenes
+
+```
+sceneLoad        // Pre-Load all assets with loading bar
+sceneMenu        // Main menu
+sceneGame        // Add gameplay here
 ```
 
 ### Build for production
