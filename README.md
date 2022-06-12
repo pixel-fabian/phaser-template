@@ -54,9 +54,9 @@ root              // config files
 ### Phaser scenes
 
 ```
-sceneLoad        // Pre-Load all assets with loading bar
-sceneMenu        // Main menu
-sceneGame        // Add gameplay here
+LoadScene        // Pre-Load all assets with loading bar
+MenuScene        // Main menu
+GameScene        // Add gameplay here
 ```
 
 ### Build for production
