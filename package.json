@@ -4,14 +4,15 @@
   "description": "Template to build a game with phaser 3",
   "main": "index.html",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "start": "webpack --watch --progress",
+    "dev": "rollup --config rollup.config.dev.js",
+    "build": "rollup --config rollup.config.dist.js",
+    "start": "rollup --watch --config rollup.config.dev.js",
     "lint": "eslint ./src --ext .ts && prettier --check --ignore-path .gitignore ./src/",
     "lint:fix": "eslint ./src/**/*.ts --fix && prettier --ignore-path .gitignore --write ./src/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pixel-fabian/phaser-blueprint.git"
+    "url": "git+https://github.com/pixel-fabian/phaser-template.git"
   },
   "keywords": [
     "phaser",
@@ -22,10 +23,13 @@
   "author": "pixel-fabian",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pixel-fabian/phaser-blueprint/issues"
+    "url": "https://github.com/pixel-fabian/phaser-template/issues"
   },
-  "homepage": "https://github.com/pixel-fabian/phaser-blueprint#readme",
+  "homepage": "https://github.com/pixel-fabian/phaser-template#readme",
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-typescript": "^8.3.3",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "cross-env": "^7.0.3",
@@ -34,9 +38,7 @@
     "eslint-config-recommended": "^4.1.0",
     "phaser": "^3.54.0",
     "prettier": "^2.2.1",
-    "ts-loader": "^9.1.1",
-    "typescript": "^4.2.4",
-    "webpack": "^5.36.2",
-    "webpack-cli": "^4.6.0"
+    "rollup": "^2.75.6",
+    "typescript": "^4.2.4"
   }
 }
